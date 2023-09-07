@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>Home</title>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!--Header Section-->
+    <header class="header">
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+        
+        <img class="logo" src='./images/logo.png' alt="Logo"></img>
+
+        <div class="search-product">
+            <input for="btn-search" type="text" placeholder="Search for Products">
+            <button id="btn-search" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <nav class="icon-header">
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+        </nav>
+    </header>
+
+    <br><br><br>
+
+    <!--Menu List Section-->
+    <div>
+        <ul type="none" id="menu-list" class="hidden">
+            <li><a href="#">HOME</a></li><br>
+            <li><a href="#">CATEGORIES</a></li><br>
+            <li><a href="#">PAYMENT METHOD</a></li><br>
+            <li><a href="#">ORDER TRACKING 🛒</a></li><br>
+            <li><a href="#">ACCOUNT</a></li><br>
+            <li><a href="#">CONTACT US</a></li><br>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </div>
+
+    <!-- Promo Section -->
+    <section class="promo" id="promo">
+        <div class="swiper promo-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>New Trending</span>
+                        <h3>Kids Fashion</h3>
+                        <p>Last call for upto 15%</p>
+                        <a href="#" class="btn">SHOP NOW</a>
+                    </div>
+                    <div class="image-promo">
+                        <img src="./image/kids-fashion.png" alt="promo-1">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>New Trending</span>
+                        <h3>Men Fashion</h3>
+                        <p>Last call for upto 15%</p>
+                        <a href="#" class="btn">SHOP NOW</a>
+                    </div>
+                    <div class="image-promo">
+                        <img src="./image/men-fashion.png" alt="promo-2">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>New Trending</span>
+                        <h3>Women Fashion</h3>
+                        <p>Last call for upto 15%</p>
+                        <a href="#" class="btn">SHOP NOW</a>
+                    </div>
+                    <div class="image-promo">
+                        <img src="./image/women-fashion.png" alt="promo-3">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!--Hot Products Section-->
+    <section class="hot-product" id="hot-product">
+        <div class="separator">
+            <hr>
+            <h4> HOT PRODUCT </h4>
+            <hr>
+        </div>
+        <br>
+        <div class="box-container">
+            <div class="box">
+                <img src="./image/clothes.png" alt="product"><br>
+                <p> Clothes </p>
+                <a href="#" class="fa-regular fa-heart"></a>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="./image/bag.png" alt="product"><br>
+                <p> Bag </p>
+                <a href="#" class="fa-regular fa-heart"></a>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="./image/belt.png" alt="product"><br>
+                <p> Belt </p>
+                <a href="#" class="fa-regular fa-heart"></a>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="./image/hat.png" alt="product"><br>
+                <div class="category-wishlist">
+                    <p> Hat </p>
+                    <a href="#" class="fa-regular fa-heart"></a>
+                </div>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+      
+    <!--New Arrivals Section-->
+    <section class="new-arrival" id="new-arrival">
+        <div class="separator">
+            <hr>
+            <h4> NEW ARRIVALS </h4>
+            <hr>
+        </div>
+        <br>
+        <div class="box-container">
+            <div class="box">
+                <img src="./image/clothes.png" alt="product">
+                <p> Clothes </p>
+                <a href="#" class="fa-regular fa-heart"></a>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="./image/bag.png" alt="product">
+                <p> Bag </p>
+                <a href="#" class="fa-regular fa-heart"></a>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="./image/belt.png" alt="product">
+                <p> Belt </p>
+                <a href="#" class="fa-regular fa-heart"></a>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="box">
+                <img src="./image/hat.png" alt="product">
+                <p> Hat </p>
+                <a href="#" class="fa-regular fa-heart"></a>
+                <h5> Name Product</h5>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span> Rp198.000 </span>
+                <span> Rp149.900 </span>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>CONTACT INFO</h3>
+            <br>
+            <h4>ADDRESS</h4>
+            <p>123 Street Name, City, Indonesia</p>
+            <br>
+            <h4>PHONE</h4>
+            <p>(021) 476-999</p>
+            <br>
+            <h4>EMAIL</h4>
+            <a href="#">mail@example.com</a>
+        </div>
+
+        <div class="footer-center">
+            <h3>PAYMENT METHODS</h3>
+            <br>
+            <div class="img-payment">
+                <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1280px-Bank_Central_Asia.svg.png">
+                <input type="image" src="https://bri.co.id/o/bri-corporate-theme/images/bri-logo.png">
+                <br><br>
+                <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/768px-Logo_ovo_purple.svg.png">
+                <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/768px-Logo_dana_blue.svg.png">
+                <br><br>
+                <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/ALFAMART_LOGO_BARU.png/1200px-ALFAMART_LOGO_BARU.png">
+                <input type="image" src="https://indomaret.co.id/Assets/image/logo.png">
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h3>DOWNLOAD OUR APP</h3>
+            <br>
+            <div class="img-download">
+                <input type="image" src="https://lh3.googleusercontent.com/0boH1fujKKcsP0xPt4VF-RcIsHfJQizc8gXfNXuoQuIhbRZ-sFhSQMawsyX_BHWpMOgpnGNvivN8k_2V0x7tXEm57F30uqhzJZFpRRQF8rd1os6_gTMg=s0">
+                <br>
+                <input type="image" src="https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg">        
+            </div>
+        <br>    
+        <p class="footer-company-name">Copyright © 2023. All right reserved.</p>
+        </div>
+    </footer>
+
+    <!--Custom JavaScript file link-->
+    <script src="./script.js"></script>
+    <!-- Swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>

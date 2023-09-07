@@ -1,0 +1,310 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    width: 100%;
+    font-size: 25px;
+    text-align:justify;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFEEF4;
+    padding: 25px 50px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.menu-logo{
+    width:50px;
+    word-spacing: 25px;
+}
+
+.search-product{
+    width:600px;
+    padding:0px;
+}
+
+.search-product input{
+    width: 90%;
+    height: 30px;
+}
+
+.search-product button{
+    width: 30px;
+    height: 30px;
+}
+
+.icon-header{
+    width:150px;
+    padding:0px;
+    letter-spacing: 12px;
+}
+
+.icon-header a:hover{
+    font-size: 25.5px;
+}
+
+div ul{
+    padding:50px;
+    float: left;
+    background-color: #FFEEF4;
+    align-items: center;
+    z-index: 100;
+}
+
+div ul.hidden{
+    display: none;
+}
+
+ul li a{
+    text-decoration: none;
+    font-family: "Segoe UI", sans-serif;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    
+}
+  
+ul li a:hover {
+    color: grey;
+    border-bottom: 1px solid grey;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+/* section:nth-child(even){
+    background: white;
+} */
+
+.promo{
+    background-color: #d9d9d996;
+    /* #ffc5d9; #fffdd0c7; #D9D9D9*/
+}
+.slide{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+    justify-content: center;
+}
+
+.content .image-promo{
+    flex: 1 1 45rem;
+    align-items: center;
+}
+
+.image-promo img{
+    width: 100%;
+}
+
+.content span{
+    color: #f7206b;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.content h3{
+    font-size: 3rem;
+}
+
+.content p{
+    color:rgba(0, 0, 0, 0.5); 
+    font-size: 1.2rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    color: black;
+    background:#f5dae3;
+    border-radius: .9rem;
+    cursor: pointer;
+    padding: .8rem 2.5rem ;
+}
+
+.btn:hover {
+    background-color: #f7206b;
+    letter-spacing: .1rem;
+    color: white;
+}
+
+.swiper-slide img{
+    display: flex;
+    width: 600px;
+    height: 350px;
+}
+
+.separator{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.separator hr{
+    width: 40%;
+    height:2px;
+    border-width:0;
+    color:black;
+    background-color:black;
+}
+
+.separator h4{
+    color: #f7206b;
+}
+
+/* Hot Products */
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1.5rem;
+}
+
+.box img{
+    width:10rem;
+    height: 10rem;
+}
+
+.category-wishlist{
+    display: inline;
+}
+
+/* Footer */
+footer{
+    padding: 3rem 9%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    margin-bottom: 0px;
+}
+
+.img-payment input{
+    width: 90px;
+    height: 30px;
+}
+
+.img-download input{
+    width:150px;
+    height:50px;
+}
+
+
+@media(max-width: 768px){
+    .header {
+        font-size: 20px;
+    }
+    
+    .menu-logo{
+        width:140px;
+    }
+    
+    .search-product{
+        width:550px;
+    }
+    
+    .icon-header{
+        width:100px;
+        letter-spacing: 2px;
+    }
+
+    .icon-header a:hover{
+        font-size: 20.5px;
+    }
+
+    .separator hr{
+        width: 35%;
+    }
+    
+    /* Footer */
+    footer{
+        font-size: 12px;
+    }
+    
+    .img-payment input{
+        width: 80px;
+        height: 25px;
+    }
+
+    .img-download input{
+        width:140px;
+        height:40px;
+    }
+}
+
+@media(max-width: 426px){
+    .header {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
+    .menu-logo{
+        width:80px;
+        word-spacing: 1px;
+    }
+    
+    .search-product{
+        width:150px;
+    }
+    
+    .search-product input{
+        width: 83%;
+        height: 20px;
+    }
+    
+    .search-product button{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .icon-header{
+        width:70px;
+        letter-spacing: 3px;
+    }
+
+    .icon-header a:hover{
+        font-size: 14.5px;
+    }
+
+    .swiper-slide img{
+        display: flex;
+        width: 300px;
+        height: 175px;
+    }
+
+    .separator hr{
+        width: 28%;
+    }
+    
+    .separator h4{
+        font-size: .7rem;
+    }
+
+    /* Footer */
+    footer{
+        font-size: 8px;
+    }
+    
+    .img-payment input{
+        width: 40px;
+        height: 15px;
+    }
+
+    .img-download input{
+        width:90px;
+        height:30px;
+    }
+}
