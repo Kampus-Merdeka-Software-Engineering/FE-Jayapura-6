@@ -63,7 +63,7 @@ div ul.hidden{
     display: none;
 }
 
-ul li a{
+.menu-section ul li a{
     text-decoration: none;
     font-family: "Segoe UI", sans-serif;
     color: #191919;
@@ -72,7 +72,7 @@ ul li a{
     
 }
   
-ul li a:hover {
+.menu-section ul li a:hover {
     color: grey;
     border-bottom: 1px solid grey;
 }
@@ -129,9 +129,9 @@ section{
     font-size: .9rem;
     color: black;
     background:#f5dae3;
-    border-radius: .9rem;
+    border-radius: .5rem;
     cursor: pointer;
-    padding: .8rem 2.5rem ;
+    padding: .8rem 2rem ;
 }
 
 .btn:hover {
@@ -177,8 +177,161 @@ section{
     height: 10rem;
 }
 
-.category-wishlist{
-    display: inline;
+#wishlist-icon{
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-size: .9rem;
+    color: black;
+    background:#f5dae3;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem .5rem ;
+}
+
+#wishlist-icon:hover{
+    background-color: #f7206b;
+    letter-spacing: .1rem;
+    color: white;
+}
+
+.initial-price{
+    text-decoration: line-through;
+}
+
+/* Benefit */
+.benefit{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+.box-benefit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #191919;
+    padding: 12px
+}
+
+.benefit-content{
+    padding-left: 12px;
+}
+
+.benefit-content h6{
+    font-size: 18px;
+}
+
+.benefit-content p{
+    font-size: 15px;
+}
+
+.logo-benefit i{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+/* Order Page */
+.order-page{
+    display:flex;
+    flex-direction: row;
+}
+
+.menu-order{
+    margin-top: 12px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #FFEEF4;
+}
+
+.menu-order ul{
+    width: 200px;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.menu-order ul li a{
+    text-decoration: none;
+    font-family: "Segoe UI", sans-serif;
+    color: #191919;
+    font-size: 20px;
+}
+
+.menu-order ul li a:hover{
+    font-weight: 600;
+}
+
+.menu-order .active{
+    text-decoration: underline;
+}
+
+.my-order{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 12px 20px;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.table tr th{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 500px;
+    border: 2px solid black;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:#f7206b;
+    color: white;
+}
+
+.table tr td{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 500px;
+    border: 1px solid black;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.table .action{
+    background-color:#FFEEF4;
+    text-decoration: none;
+}
+
+/* Wishlist Page */
+.wishlist-page h2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family:'Segoe UI', sans-serif;
+    font-size: 25px;    
+}
+
+.wishlist-page .box-container .box{
+    margin-bottom: 20px;
+}
+
+/* Scrool Top Button */
+.go-to-up{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background:#f7206b;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    border-radius: 50%;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* Footer */
@@ -227,7 +380,13 @@ footer{
     .separator hr{
         width: 35%;
     }
-    
+  
+    /* Order Page */
+    .order-page{
+        display:flex;
+        flex-direction: column;
+    }
+
     /* Footer */
     footer{
         font-size: 12px;
@@ -279,6 +438,10 @@ footer{
         font-size: 14.5px;
     }
 
+    .btn{
+        padding: .8rem 1.5rem ;
+    }
+
     .swiper-slide img{
         display: flex;
         width: 300px;
@@ -291,6 +454,32 @@ footer{
     
     .separator h4{
         font-size: .7rem;
+    }
+
+    /* Order Page */
+    .order-page{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .my-order{
+        margin: 6px 10px;
+        padding: 10px;
+        font-size: 10px;
+    }
+    
+    .table tr th{
+        width: 250px;
+        padding: 4px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    
+    .table tr td{
+        width: 250px;
+        padding: 4px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
 
     /* Footer */

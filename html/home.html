@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
     <title>Home</title>
     <!-- custom css file link -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../front-end-capstone-project-section-jayapura-group-6/style/style.css">
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <!-- swiper cdn link -->
@@ -20,7 +20,7 @@
             </div>
         </nav>
         
-        <img class="logo" src='./images/logo.png' alt="Logo"></img>
+        <img class="logo" src='../images/logo.png' alt="Logo"></img>
 
         <div class="search-product">
             <input for="btn-search" type="text" placeholder="Search for Products">
@@ -28,8 +28,8 @@
         </div>
 
         <nav class="icon-header">
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="../html/order.html"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="#"><i class="fa-regular fa-user"></i></a>
         </nav>
     </header>
@@ -37,12 +37,12 @@
     <br><br><br>
 
     <!--Menu List Section-->
-    <div>
+    <div class="menu-section">
         <ul type="none" id="menu-list" class="hidden">
-            <li><a href="#">HOME</a></li><br>
+            <li><a href="./home.html">HOME</a></li><br>
             <li><a href="#">CATEGORIES</a></li><br>
             <li><a href="#">PAYMENT METHOD</a></li><br>
-            <li><a href="#">ORDER TRACKING 🛒</a></li><br>
+            <li><a href="../html/order.html">ORDER TRACKING 🛒</a></li><br>
             <li><a href="#">ACCOUNT</a></li><br>
             <li><a href="#">CONTACT US</a></li><br>
             <li><a href="#">FAQ</a></li>
@@ -61,7 +61,7 @@
                         <a href="#" class="btn">SHOP NOW</a>
                     </div>
                     <div class="image-promo">
-                        <img src="./image/kids-fashion.png" alt="promo-1">
+                        <img src="../image/kids-fashion.png" alt="promo-1">
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                         <a href="#" class="btn">SHOP NOW</a>
                     </div>
                     <div class="image-promo">
-                        <img src="./image/men-fashion.png" alt="promo-2">
+                        <img src="../image/men-fashion.png" alt="promo-2">
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@
                         <a href="#" class="btn">SHOP NOW</a>
                     </div>
                     <div class="image-promo">
-                        <img src="./image/women-fashion.png" alt="promo-3">
+                        <img src="../image/women-fashion.png" alt="promo-3">
                     </div>
                 </div>
             </div>
@@ -104,10 +104,9 @@
         <br>
         <div class="box-container">
             <div class="box">
-                <img src="./image/clothes.png" alt="product"><br>
-                <p> Clothes </p>
-                <a href="#" class="fa-regular fa-heart"></a>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/clothes.png" alt="product"><br>
+                <p class="category-name"> Clothes </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -115,16 +114,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
 
             <div class="box">
-                <img src="./image/bag.png" alt="product"><br>
-                <p> Bag </p>
-                <a href="#" class="fa-regular fa-heart"></a>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/bag.png" alt="product"><br>
+                <p class="category-name"> Bag </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -132,16 +131,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
 
             <div class="box">
-                <img src="./image/belt.png" alt="product"><br>
-                <p> Belt </p>
-                <a href="#" class="fa-regular fa-heart"></a>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/belt.png" alt="product"><br>
+                <p class="category-name"> Belt </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -149,18 +148,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
 
             <div class="box">
-                <img src="./image/hat.png" alt="product"><br>
-                <div class="category-wishlist">
-                    <p> Hat </p>
-                    <a href="#" class="fa-regular fa-heart"></a>
-                </div>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/hat.png" alt="product"><br>
+                <p class="category-name"> Hat </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -168,13 +165,41 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
         </div>
     </section>
       
+    <!-- Benefit Section -->
+    <section class="benefit" id="benefit">
+        <div class="box-benefit">
+            <div class="logo-benefit"><i class="fa-solid fa-taxi"></i></div>
+            <div class="benefit-content">
+                <h6>FREE SHIPPING & RETURN</h6>
+                <p>Free shipping on all orders over Rp699.000</p>
+            </div>
+        </div>
+
+        <div class="box-benefit">
+            <div class="logo-benefit"><i class="fa-solid fa-money-bill"></i></div>
+            <div class="benefit-content">
+                <h6>MONEY BACK GUARANTEE</h6>
+                <p>100% money back guarantee</p>
+            </div>
+        </div>
+
+        <div class="box-benefit">
+            <div class="logo-benefit"><i class="fa-solid fa-headset"></i></div>
+            <div class="benefit-content">
+                <h6>ONLINE SUPPORT 24/7</h6>
+                <p>Support for 24/7 Days</p>
+            </div>
+        </div>
+    </section>
+
     <!--New Arrivals Section-->
     <section class="new-arrival" id="new-arrival">
         <div class="separator">
@@ -185,10 +210,9 @@
         <br>
         <div class="box-container">
             <div class="box">
-                <img src="./image/clothes.png" alt="product">
-                <p> Clothes </p>
-                <a href="#" class="fa-regular fa-heart"></a>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/clothes.png" alt="product"><br>
+                <p class="category-name"> Clothes </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -196,16 +220,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
 
             <div class="box">
-                <img src="./image/bag.png" alt="product">
-                <p> Bag </p>
-                <a href="#" class="fa-regular fa-heart"></a>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/bag.png" alt="product"><br>
+                <p class="category-name"> Bag </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -213,16 +237,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
 
             <div class="box">
-                <img src="./image/belt.png" alt="product">
-                <p> Belt </p>
-                <a href="#" class="fa-regular fa-heart"></a>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/belt.png" alt="product"><br>
+                <p class="category-name"> Belt </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -230,16 +254,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
 
             <div class="box">
-                <img src="./image/hat.png" alt="product">
-                <p> Hat </p>
-                <a href="#" class="fa-regular fa-heart"></a>
-                <h5> Name Product</h5>
+                <img class="image-product" src="../image/hat.png" alt="product"><br>
+                <p class="category-name"> Hat </p>
+                <h5 class="product-name"> Name Product</h5>
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -247,12 +271,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </div>
-                <span> Rp198.000 </span>
-                <span> Rp149.900 </span>
+                <span class="initial-price"> Rp198.000 </span>
+                <span class="price"> Rp149.900 </span>
                 <a href="#" class="btn">Add to Cart</a>
+                <a href="#" id="wishlist-icon" class="fa-regular fa-heart"></a>
             </div>
         </div>
     </section>
+
+    <!-- Scrool Top Button -->
+    <a class="go-to-up" href="#"><i class="fa-solid fa-arrow-up"></i></a>
 
     <!-- Footer Section -->
     <footer class="footer-distributed">
@@ -298,7 +326,7 @@
     </footer>
 
     <!--Custom JavaScript file link-->
-    <script src="./script.js"></script>
+    <script src="../../front-end-capstone-project-section-jayapura-group-6\js\script.js"></script>
     <!-- Swiper js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
