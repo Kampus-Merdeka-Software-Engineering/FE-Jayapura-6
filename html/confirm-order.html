@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
-    <title>Wishlist</title>
+    <title>Confirm Order</title>
     <!-- custom css file link -->
     <link rel="stylesheet" href="../../front-end-capstone-project-section-jayapura-group-6/style/style.css">
     <!-- font awesome cdn link -->
@@ -33,7 +33,7 @@
         </nav>
     </header>
 
-    <br><br><br>
+    <br><br><br><br><br>
 
     <!--Menu List Section-->
     <div class="menu-section">
@@ -41,84 +41,60 @@
             <li><a href="./home.html">HOME</a></li><br>
             <li><a href="#">CATEGORIES</a></li><br>
             <li><a href="#">PAYMENT METHOD</a></li><br>
-            <li><a href="./order.html">ORDER TRACKING 🛒</a></li><br>
+            <li><a href="../html/order.html">ORDER TRACKING 🛒</a></li><br>
             <li><a href="./profile.html">ACCOUNT</a></li><br>
             <li><a href="#">CONTACT US</a></li><br>
             <li><a href="#">FAQ</a></li>
         </ul>
     </div>
 
-    <!-- Wishlist Page -->
-    <section class="wishlist-page">
-        <h2>My Wishlist</h2>
-        <div class="box-container">
-            <div class="box">
-                <img class="image-product" src="../image/clothes.png" alt="product"><br>
-                <p class="category-name"> Clothes </p>
-                <h5 class="product-name"> Name Product</h5>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <span class="initial-price"> Rp198.000 </span>
-                <span class="price"> Rp149.900 </span>
-                <a href="./confirm-order.html" class="btn">Add to Cart</a>
-                <a href="./wishlist.html" id="wishlist-icon" class="fa-solid fa-heart"></a>
-            </div>
+    <!-- Confirm Order Section -->
+    <section class="confirm-order">
+        <div class="product-details">
+            <img src="..//image/hat.png" alt="Product Image">
+            <h2>Product's Name</h2><br>
+            <h3>Rp79.900</h3><br>
+            <p>The Product Description will be displayed here.</p>        
+        </div>
+        
+        <div class="order-details">
+            <h2>Order Details</h2>
+            <form>
+                <label for="nama">Name:</label>
+                <input type="text" id="nama" name="nama" required>
+                    
+                <label for="alamat">Address:</label>
+                <textarea id="alamat" name="alamat" required></textarea>
+                
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required> 
 
-            <div class="box">
-                <img class="image-product" src="../image/bag.png" alt="product"><br>
-                <p class="category-name"> Bag </p>
-                <h5 class="product-name"> Name Product</h5>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <span class="initial-price"> Rp198.000 </span>
-                <span class="price"> Rp149.900 </span>
-                <a href="./confirm-order.html" class="btn">Add to Cart</a>
-                <a href="./wishlist.html" id="wishlist-icon" class="fa-solid fa-heart"></a>
-            </div>
-
-            <div class="box">
-                <img class="image-product" src="../image/belt.png" alt="product"><br>
-                <p class="category-name"> Belt </p>
-                <h5 class="product-name"> Name Product</h5>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <span class="initial-price"> Rp198.000 </span>
-                <span class="price"> Rp149.900 </span>
-                <a href="./confirm-order.html" class="btn">Add to Cart</a>
-                <a href="./wishlist.html" id="wishlist-icon" class="fa-solid fa-heart"></a>
-            </div>
-
-            <div class="box">
-                <img class="image-product" src="../image/hat.png" alt="product"><br>
-                <p class="category-name"> Hat </p>
-                <h5 class="product-name"> Name Product</h5>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <span class="initial-price"> Rp198.000 </span>
-                <span class="price"> Rp149.900 </span>
-                <a href="./confirm-order.html" class="btn">Add to Cart</a>
-                <a href="./wishlist.html" id="wishlist-icon" class="fa-solid fa-heart"></a>
-            </div>
+                <label for="no-hp">Phone Number:</label>
+                <input type="tel" id="no-hp" name="no-hp" required>
+                    
+                <label for="pengiriman">Payment Services:</label>
+                <select id="pengiriman" name="pengiriman" required>
+                    <option value="jne">JNE</option>
+                    <option value="tiki">Tiki</option>
+                    <option value="pos">Pos Indonesia</option>
+                </select>
+                
+                <label for="pembayaran">Payment Method:</label>
+                <select id="pembayaran" name="pembayaran" required>
+                    <option value="bca">BCA</option>
+                    <option value="bri">BRI</option>
+                    <option value="ovo">OVO</option>
+                    <option value="dana">DANA</option>
+                    <option value="alfamart">Alfamart</option>
+                    <option value="indomaret">Indomaret</option>
+                </select>
+                    
+                <label for="total">Total Payment:</label>
+                <input type="text" id="total" name="total" required>
+                    
+                <button href="./order.html" type="submit" class="confirm-btn">Add to Cart</button>
+                <button href="./home.html" type="button" class="cancel-btn">Cancel</button>
+            </form>
         </div>
     </section>
 

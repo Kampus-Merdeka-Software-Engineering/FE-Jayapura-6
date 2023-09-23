@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
-    <title>Order</title>
-    <!-- custom css file link -->
-    <link rel="stylesheet" href="../../front-end-capstone-project-section-jayapura-group-6/style/style.css">
-    <!-- font awesome cdn link -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Let's Sign In</title>
+    <link rel="stylesheet" href="../style/profile-before.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
-
 <body>
     <!--Header Section-->
     <header class="header">
@@ -27,9 +24,9 @@
         </div>
 
         <nav class="icon-header">
-            <a href="./wishlist.html"><i class="fa-regular fa-heart"></i></a>
-            <a href="./order.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="./profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="./signIn.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="./signIn.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./signIn.html"><i class="fa-regular fa-user"></i></a>
         </nav>
     </header>
 
@@ -41,63 +38,36 @@
             <li><a href="./home.html">HOME</a></li><br>
             <li><a href="#">CATEGORIES</a></li><br>
             <li><a href="#">PAYMENT METHOD</a></li><br>
-            <li><a href="./order.html">ORDER TRACKING 🛒</a></li><br>
-            <li><a href="./profile.html">ACCOUNT</a></li><br>
+            <li><a href="./signIn.html">ORDER TRACKING 🛒</a></li><br>
+            <li><a href="./profile-before.html">ACCOUNT</a></li><br>
             <li><a href="#">CONTACT US</a></li><br>
             <li><a href="#">FAQ</a></li>
         </ul>
     </div>
 
-    <!-- Menu Profile Page -->
-    <section class="order-page">
+
+    <!-- Profile Page Before SignIn-->
+    <section class="profile-page">
         <div class="menu-order">
             <ul type="none">
-                <li><a href="./profile.html">My Profile</a></li>
+                <li><a class="active" href="./profile-before.html">My Profile</a></li>
                 <li><a href="#">Addresses</a></li>
                 <li><a href="#">Payment Methods</a></li>
                 <li><a href="#">Messages</a></li>
-                <li><a href="./wishlist.html">Wishlist</a></li>
-                <li><a class="active" href="./order.html">Orders</a></li>
+                <li><a href="./signIn.html">Wishlist</a></li>
+                <li><a href="./signIn.html">Orders</a></li>
                 <br><br>
-                <li><a href="./profile-before.html">Log Out</a></li>
+                <li><a href="./signIn.html">Sign In</a></li>
             </ul>
         </div>
-        
-        <div class="my-order">
-            <h2>MY ORDERS</h2><br>
-            <table class="table">
-                <tr>
-                    <th>No. Order</th>
-                    <th>Product's Name</th>
-                    <th>Total Price</th>
-                    <th>Action</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td class="order-number">#B1003092023</td>
-                    <td class="product-name">Product Name</td>
-                    <td class="total-price">Rp120.000</td>
-                    <td class="action"><a href="#">Pay</a></td>
-                    <td class="status">On Progress</td>
-                </tr>
-                <tr>
-                    <td class="order-number">#C5403092023</td>
-                    <td class="product-name">Product Name</td>
-                    <td class="total-price">Rp56.000</td>
-                    <td class="action"><a href="#">Pay</a></td>
-                    <td class="status">On Progress</td>
-                </tr>
-                <tr>
-                    <td class="order-number">#B6010082023</td>
-                    <td class="product-name">Product Name</td>
-                    <td class="total-price">Rp180.000</td>
-                    <td class="action"><a href="#">View</a></td>
-                    <td class="status">Completed</td>
-                </tr>
-            </table>
+
+        <div class="greet">
+            <article> 
+                <h2>Hello, <a href="./signIn.html">Sign In</a></h2>
+            </article>
         </div>
     </section>
-
+               
     <!-- Scrool Top Button -->
     <a class="go-to-up" href="#"><i class="fa-solid fa-arrow-up"></i></a>
     
