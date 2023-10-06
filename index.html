@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>Home</title>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!--Header Section-->
+    <header class="header">
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+            </div>
+        </nav>
+        
+        <img class="logo" src='./image/logo.png' alt="Logo"></img>
+
+        <div class="search-product">
+            <input id="search-input" for="btn-search" type="text" placeholder="Search">
+            <button id="btn-search" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>       
+
+        <nav class="icon-header">
+            <a href="https://wa.me/628551235178" target="_blank"><i class="fa-solid fa-phone"></i></a>
+            <a href="./html/order.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="./html/profile.html"><i class="fa-regular fa-user"></i></a>
+        </nav>
+    </header>
+
+    <br><br><br>
+
+    <!-- Promo Section -->
+    <section class="promo" id="promo">
+        <div class="swiper promo-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide" id="slide">
+                    <div class="content">
+                        <span>New Trending</span>
+                        <h3>Kids Fashion</h3>
+                        <p>Last call for upto 15%</p>
+                        <a href="#" class="btn">SHOP NOW</a>
+                    </div>
+                    <div class="image-promo">
+                        <img src="./image/kids-fashion.png" alt="promo-1">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" id="slide">
+                    <div class="content">
+                        <span>New Trending</span>
+                        <h3>Men Fashion</h3>
+                        <p>Last call for upto 15%</p>
+                        <a href="#" class="btn">SHOP NOW</a>
+                    </div>
+                    <div class="image-promo">
+                        <img src="./image/men-fashion.png" alt="promo-2">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" id="slide">
+                    <div class="content">
+                        <span>New Trending</span>
+                        <h3>Women Fashion</h3>
+                        <p>Last call for upto 15%</p>
+                        <a href="#" class="btn">SHOP NOW</a>
+                    </div>
+                    <div class="image-promo">
+                        <img src="./image/women-fashion.png" alt="promo-3">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Benefit Section -->
+    <section class="benefit" id="benefit">
+        <div class="box-benefit">
+            <div class="logo-benefit"><i class="fa-solid fa-taxi"></i></div>
+            <div class="benefit-content">
+                <h6>FREE SHIPPING & RETURN</h6>
+                <p>Free shipping on all orders</p>
+            </div>
+        </div>
+
+        <div class="box-benefit">
+            <div class="logo-benefit"><i class="fa-solid fa-money-bill"></i></div>
+            <div class="benefit-content">
+                <h6>MONEY BACK GUARANTEE</h6>
+                <p>100% money back guarantee</p>
+            </div>
+        </div>
+
+        <div class="box-benefit">
+            <div class="logo-benefit"><i class="fa-solid fa-headset"></i></div>
+            <div class="benefit-content">
+                <h6>ONLINE SUPPORT 24/7</h6>
+                <p>Support for 24/7 Days</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Products Section-->
+    <section class="hot-product" id="hot-product">
+        <div class="separator">
+            <hr>
+            <h4> PRODUCTS </h4>
+            <hr>
+        </div>
+        <br>
+        <div class="box-container" id="root">
+            <!-- Adding element in Javascript -->
+        </div>
+    </section>
+
+    <!-- Cart Section-->
+    <section class="sidebar">
+        <div class="head"><p>My Cart  <i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></p></div>
+        <div id="cartItem">Your cart is empty</div>
+        <div class="foot">
+            <h3>Total</h3>
+            <h2 id="total">Rp 0.00</h2>
+        </div>
+        <div class="order-details">
+            <h2>Order Details</h2>
+            <form>
+                <label for="nama">Name:</label>
+                <input type="text" id="nama" name="nama" required>
+                    
+                <label for="alamat">Address:</label>
+                <textarea id="alamat" name="alamat" required></textarea>
+                
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required> 
+
+                <label for="no-hp">Phone Number:</label>
+                <input type="tel" id="no-hp" name="no-hp" required>
+                    
+                <label for="pengiriman">Payment Services:</label>
+                <select id="pengiriman" name="pengiriman" required>
+                    <option value="jne">JNE</option>
+                    <option value="tiki">Tiki</option>
+                    <option value="pos">Pos Indonesia</option>
+                </select>
+                
+                <label for="gambar">Upload Bukti Pembayaran:</label>
+                <input type="file" name="gambar" id="gambar" accept="image/*" required>
+                <br><br>
+            </form>
+        </div>
+        <a href="./html/order.html"><button type="submit" class="btn">Order</button></a>
+    </section>
+
+    <br><br>
+
+    <!-- Scrool Top Button -->
+    <a class="go-to-up" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- Footer Section -->
+    <footer class="footer-distributed">
+        <p class="footer-company-name">Copyright Group 6 Jayapura © 2023. All right reserved.</p>
+    </footer>
+
+    <!--Custom JavaScript file link-->
+    <script src="./js/script.js"></script>
+
+    <!-- Swiper js link -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>

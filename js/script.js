@@ -1,120 +1,182 @@
-// Script Tampilan Menu
-const menuIcon = document.getElementById("menu-icon");
-const menuList = document.getElementById("menu-list");
-
-menuIcon.addEventListener("click", () => {
-    menuList.classList.toggle("hidden"); //menambahkan kelas CSS "hidden" jika belum ada pada elemen tersebut, atau menghapusnya jika sudah ada
-});
-
 // Script Slider dengan Swiper
 document.addEventListener("DOMContentLoaded", function () {
-// Inisialisasi slider
-  var mySwiper = new Swiper(".promo-slider", {
-    slidesPerView: 1, // Jumlah slide yang ditampilkan dalam satu tampilan
-    spaceBetween: 30, // Jarak antara slide
-    loop: true, // Aktifkan looping slider
-    navigation: {
-      nextEl: ".swiper-button-next", // Selector tombol berikutnya
-      prevEl: ".swiper-button-prev", // Selector tombol sebelumnya
-    },
-    autoplay: {
-      delay: 5000, // Durasi antara slide dalam milidetik
-    },
+  // Inisialisasi slider
+    var mySwiper = new Swiper(".promo-slider", {
+      slidesPerView: 1, // Jumlah slide yang ditampilkan dalam satu tampilan
+      spaceBetween: 30, // Jarak antara slide
+      loop: true, // Aktifkan looping slider
+      navigation: {
+        nextEl: ".swiper-button-next", // Selector tombol berikutnya
+        prevEl: ".swiper-button-prev", // Selector tombol sebelumnya
+      },
+      autoplay: {
+        delay: 5000, // Durasi antara slide dalam milidetik
+      },
+    });
   });
-});
 
+const product = [
+  {
+    id: 0,
+    image:  "./image/clothes.png",
+    category: "Clothes",
+    productName: "Black T-Shirt",
+    price: 79900,
+  },
+  {
+    id: 1,
+    image:  "./image/clothes2.png",
+    category: "Clothes",
+    productName: "Sweater",
+    price: 169900,
+  },
+  {
+    id: 2,
+    image:  "./image/clothes3.png",
+    category: "Clothes",
+    productName: "White Sweater",
+    price: 149900,
+  },
+  {
+    id: 3,
+    image:  "./image/bag.png",
+    category: "Bag",
+    productName: "Woman Bag",
+    price: 349900,
+  },
+  {
+    id: 4,
+    image:  "./image/bag2.png",
+    category: "Bag",
+    productName: "School Bag",
+    price: 199900,
+  },
+  {
+    id: 5,
+    image:  "./image/belt.png",
+    category: "Belt",
+    productName: "Belt",
+    price: 49900,
+  },
+  {
+    id: 6,
+    image:  "./image/hat.png",
+    category: "Hat",
+    productName: "Hat",
+    price: 89900,
+  },
+  {
+    id: 7,
+    image:  "./image/pants.png",
+    category: "Pants",
+    productName: "Pants Men",
+    price: 269900,
+  },
+  {
+    id: 8,
+    image:  "./image/pants2.png",
+    category: "Pants",
+    productName: "Pants",
+    price: 299900,
+  },
+  {
+    id: 9,
+    image:  "./image/shoes.png",
+    category: "Shoes",
+    productName: "Sports Shoes",
+    price: 399900,
+  },
+  {
+    id: 10,
+    image:  "./image/shoes2.png",
+    category: "Shoes",
+    productName: "Casual Shoes",
+    price: 499900,
+  },
+  {
+    id: 11,
+    image:  "./image/skirt.png",
+    category: "Skirt",
+    productName: "Short Skirt",
+    price: 79900,
+  }
+];
 
-// Fungsi untuk membuat elemen produk
-function createProduct(imageSrc, categoryName, productName, rating, initialPrice, price) {
-  // Buat elemen produk (div) sebagai container
-  var product = document.createElement('div');
-  product.classList.add('box');
+// Adding Products
+const categories = [...new Set(product.map((item)=>
+  {return item}))]
+  let i=0;
 
-  // Buat elemen gambar produk
-  var image = document.createElement('img');
-  image.classList.add('image-product');
-  image.src = imageSrc;
-  image.alt = 'product';
+document.getElementById('root').innerHTML = categories.map((item)=>
+{
+  var {image, category, productName, price} = item;
+  return(
+      `<div class="box">
+        <img class="image-product" src=${image}><br>
+        <p class="category-name">${category}</p>
+        <h5 class="product-name">${productName}</h5>
+        <span class="price"> Rp ${price}</span><br>` +
+        "<button onclick='addtocart("+(i++)+")' class='btn'>Add to cart</button>"+
+        `<a id="wishlist-icon" class="fa-solid fa-heart"></a>
+      </div>`
+  )
+}).join('')
 
-  // Buat elemen kategori produk
-  var category = document.createElement('p');
-  category.classList.add('category-name');
-  category.textContent = categoryName;
+// Adding to Cart
+var cart =[];
 
-  // Buat elemen nama produk
-  var name = document.createElement('h5');
-  name.classList.add('product-name');
-  name.textContent = productName;
-
-  // Buat elemen bintang (rating) produk
-  var stars = document.createElement('div');
-    stars.classList.add('stars');
-    for (var i = 0; i < 5; i++) {
-      var star = document.createElement('i');
-      star.classList.add('fa-solid','fa-star' + (i < rating ? '' : '-empty'));
-      stars.appendChild(star);
-    }
-    product.appendChild(stars);
-
-  // Buat elemen harga awal
-  var initialPriceSpan = document.createElement('span');
-  initialPriceSpan.classList.add('initial-price');
-  initialPriceSpan.textContent = initialPrice;
-
-  // Buat elemen harga diskon
-  var priceSpan = document.createElement('span');
-  priceSpan.classList.add('price');
-  priceSpan.textContent = price;
-
-  // Buat tombol "Add to Cart"
-  var addToCartLink = document.createElement('a');
-  addToCartLink.classList.add('btn');
-  addToCartLink.href = './confirm-order.html';
-  addToCartLink.textContent = 'Add to Cart';
-
-  // Buat ikon "Wishlist"
-  var wishlistIcon = document.createElement('a');
-  wishlistIcon.id = 'wishlist-icon';
-  wishlistIcon.classList.add('fa-regular', 'fa-heart');
-  wishlistIcon.href = './wishlist.html';
-
-  // Tambahkan semua elemen ke dalam elemen produk
-  product.appendChild(image);
-  product.appendChild(category);
-  product.appendChild(name);
-  product.appendChild(stars);
-  product.appendChild(initialPriceSpan);
-  product.appendChild(priceSpan);
-  product.appendChild(addToCartLink);
-  product.appendChild(wishlistIcon);
-
-  return product;
+function addtocart(a){
+  cart.push({...categories[a]});
+  displaycart();
+}
+function delElement(a){
+  cart.splice(a, 1);
+  displaycart();
 }
 
-// Dapatkan elemen kontainer produk
-var hotProductContainer = document.querySelector('.box-container');
-var productContainer = document.querySelector('.arrival-box-container')
+function displaycart(){
+  let j = 0, total=0;
+  document.getElementById("count").innerHTML=cart.length;
+  if(cart.length==0){
+      document.getElementById('cartItem').innerHTML = "Your cart is empty";
+      document.getElementById("total").innerHTML = "Rp "+0+".00";
+  }
+  else{
+      document.getElementById("cartItem").innerHTML = cart.map((items)=>
+      {
+          var {image, productName, price} = items;
+          total=total+price;
+          document.getElementById("total").innerHTML = "Rp "+total+".00";
+          return(
+              `<div class='cart-item'>
+              <div class='row-img'>
+                  <img style='width: 30px;' class='rowimg' src=${image}>
+              </div>
+              <p style='font-size:12px;'>${productName}</p>
+              <h2 style='font-size: 15px;'>Rp ${price}.00</h2>`+
+              "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+          );
+      }).join('');
+  }
+}
 
-// Panggil fungsi createProduct untuk membuat produk
-var product = createProduct('../image/clothes.png', 'Clothes', 'Name Product', 4, 'Rp198.000', 'Rp149.900');
-var product2 = createProduct('../image/bag.png', 'Bag', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product3 = createProduct('../image/belt.png', 'Belt', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product4 = createProduct('../image/hat.png', 'Hat', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product5 = createProduct('../image/clothes2.png', 'Clothes', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product6 = createProduct('../image/bag2.png', 'Bag', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product7 = createProduct('../image/pants.png', 'Pants', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product8 = createProduct('../image/shoes.png', 'Shoes', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product9 = createProduct('../image/shoes2.png', 'Shoes', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
-var product10 = createProduct('../image/clothes3.png', 'Clothes', 'Name Product', 5, 'Rp198.000', 'Rp149.900');
+// WISHLIST SCRIPT
+// Dapatkan semua elemen dengan ID yang sama
+var wishlistIcons = document.querySelectorAll('[id^="wishlist-icon"]');
 
-// Tambahkan produk ke dalam kontainer hot produk
-hotProductContainer.appendChild(product);
-hotProductContainer.appendChild(product2);
-hotProductContainer.appendChild(product3);
-hotProductContainer.appendChild(product4);
+// Tambahkan event listener untuk setiap elemen dengan ID yang sama
+wishlistIcons.forEach(function(wishlistIcon) {
+  wishlistIcon.addEventListener("click", function(event) {
+    // Cek apakah tombol memiliki kelas CSS tertentu (misalnya, "active")
+    if (wishlistIcon.classList.contains("active")) {
+      // Jika iya, hapus kelas "active" untuk mengembalikan ke tampilan awal
+      wishlistIcon.classList.remove("active");
+    } else {
+      // Jika tidak, tambahkan kelas "active" untuk mengubah tampilan
+      wishlistIcon.classList.add("active");
+    }
 
-// Tambahkan produk ke dalam kontainer new arrival produk
-productContainer.appendChild(product5);
-productContainer.appendChild(product6);
-productContainer.appendChild(product7);
-productContainer.appendChild(product8);      
+    // Untuk menghentikan peristiwa dari mengarahkan ke halaman "wishlist.html"
+    event.preventDefault();
+  });
+});
