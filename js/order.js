@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('order-btn').addEventListener('click', function (e) {
         e.preventDefault(); // Menghentikan aksi default dari tombol
-        console.log("bisa")
+        // console.log("bisa")
 
         // Ambil token dari local storage
-        const user = localStorage.getItem('user');
+        const user = JSON.parse(localStorage.getItem('user'));
         if (user === null) {
             if (confirm('Anda belum login!')) {
                 window.location.replace("html/signIn.html")
             }
         }
         console.log(user)
+
+        const token = user.accessToken;
+        console.log(token)
         
         // Ambil data dari formulir
-        const cartItem = document.getElementById('cartItem').value;
+        const cartItem = localStorage.getItem('cart');
         const total = document.getElementById('total').value;
         const nama = document.querySelector('[name="nama"]').value;
         const alamat = document.querySelector('[name="alamat"]').value;
@@ -21,14 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const hp = document.querySelector('[name="no-hp"]').value;
         const pengiriman = document.querySelector('[name="pengiriman"]').value;
         const gambar = document.querySelector('[name="gambar"]').value;
-        console.log("cartItem" + "" + cartItem)
-        console.log("pengiriman" + "" + pengiriman)
+        console.log("cartItem" + "" + cartItem);
+        console.log("total" + "" + total);
+        console.log("pengiriman" + "" + pengiriman);
+
+        JSON.parse(cartItem)[0]
+        const product1 = JSON.parse(cartItem)[0];
+        console.log(product1);
 
         // Buat objek data
         const data = {
             user_id: user.id,
-            product_id: productId,
-            total_payment: total,
+            product_id: product1.id,
+            total_payment: product1.price,
             address: alamat,
             payment_service: pengiriman,
             payment_proof: gambar,
@@ -51,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Order berhasil
                 alert('Order berhasil');
                 // Contoh: Mengarahkan ke halaman order
-                window.location.href = './html/order.html';
+                // window.location.href = './html/order.html';
             } else {
                 // Order gagal, tampilkan pesan kesalahan
                 alert('Order gagal. Periksa kembali pesanan Anda.');

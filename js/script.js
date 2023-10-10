@@ -127,6 +127,7 @@ var cart =[];
 
 function addtocart(a){
   cart.push({...categories[a]});
+  localStorage.setItem('cart', JSON.stringify(cart));
   displaycart();
 }
 function delElement(a){
