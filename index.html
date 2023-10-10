@@ -133,16 +133,16 @@
             <h2>Order Details</h2>
             <form>
                 <label for="nama">Name:</label>
-                <input type="text" id="nama" name="nama" required>
+                <input type="text" id="nama" name="nama" placeholder="Name" required>
                     
                 <label for="alamat">Address:</label>
-                <textarea id="alamat" name="alamat" required></textarea>
+                <textarea id="alamat" name="alamat" placeholder="Address" required></textarea>
                 
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="email" required> 
+                <input type="email" name="email" id="email" placeholder="Email" required> 
 
                 <label for="no-hp">Phone Number:</label>
-                <input type="tel" id="no-hp" name="no-hp" required>
+                <input type="tel" id="no-hp" name="no-hp" placeholder="Phone Number" required>
                     
                 <label for="pengiriman">Payment Services:</label>
                 <select id="pengiriman" name="pengiriman" required>
@@ -156,7 +156,7 @@
                 <br><br>
             </form>
         </div>
-        <a href="./html/order.html"><button type="submit" class="btn">Order</button></a>
+        <a href="./html/order.html"><button id="order-btn" type="submit" class="btn">Order</button></a>
     </section>
 
     <br><br>
@@ -174,5 +174,8 @@
 
     <!-- Swiper js link -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Script Order -->
+    <script src="./js/order.js"></script>
 </body>
 </html>
