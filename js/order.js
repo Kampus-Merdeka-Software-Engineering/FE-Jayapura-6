@@ -4,8 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("bisa")
 
         // Ambil token dari local storage
-        const token = localStorage.getItem('token');
-
+        const token = localStorage.getItem('token').replace(/['"]+/g, '');
+        if (token === null) {
+            if (confirm('Anda belum login!')) {
+                window.location.replace("html/signIn.html")
+            }
+        }
+        console.log(token)
+        
         // Ambil data dari formulir
         const cartItem = document.getElementById('cartItem').value;
         const total = document.getElementById('total').value;

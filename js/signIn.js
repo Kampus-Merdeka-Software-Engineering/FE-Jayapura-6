@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data.accessToken) {
                 // Login berhasil, Anda dapat mengarahkan pengguna ke halaman lain atau melakukan tindakan yang sesuai
                 alert('Login berhasil');
+                localStorage.setItem('token', JSON.stringify(data.accessToken));
                 // Contoh: Mengarahkan ke halaman dashboard
                 window.location.href = '../index.html';
             } else {
