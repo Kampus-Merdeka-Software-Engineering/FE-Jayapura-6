@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("bisa")
 
         // Ambil token dari local storage
-        const token = localStorage.getItem('token').replace(/['"]+/g, '');
-        if (token === null) {
+        const user = localStorage.getItem('user');
+        if (user === null) {
             if (confirm('Anda belum login!')) {
                 window.location.replace("html/signIn.html")
             }
         }
-        console.log(token)
+        console.log(user)
         
         // Ambil data dari formulir
         const cartItem = document.getElementById('cartItem').value;
@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Buat objek data
         const data = {
+            user_id: user.id,
+            product_id: productId,
             total_payment: total,
             address: alamat,
             payment_service: pengiriman,
